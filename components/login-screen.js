@@ -1,8 +1,9 @@
 
+
 const LoginScreen = {
   render: function() {
     return `
-    <form id="login-form">
+    <form id="login-form" onsubmit='onSubmit()'>
       <input type="text" placeholder="username" id="username"/>
       <input type="password" placeholder="password" id="password"/>
       <button type="submt">Submit</button>
