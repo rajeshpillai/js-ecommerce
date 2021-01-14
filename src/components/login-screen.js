@@ -1,5 +1,3 @@
-
-
 const LoginScreen = {
   after_render: function() {
     document.querySelector("#login-form")
