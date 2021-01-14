@@ -30,7 +30,7 @@ const router = async () => {
   const screen = routes[parseUrl] ? routes[parseUrl]: Error404Screen;
 
   const headerElem = document.querySelector("#header-container");
-  headerElem.innerHTML = HeaderComponent.render();
+  headerElem.innerHTML = await HeaderComponent.render();
 
   rootEle.innerHTML = await screen.render();
   if (screen.after_render) {
