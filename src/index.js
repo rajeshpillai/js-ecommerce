@@ -1,10 +1,13 @@
 import LoginScreen from './components/login-screen.js';
+import HomeScreen from './components/home-screen';
 
 const rootEle = document.querySelector("#root");
-rootEle.innerHTML = LoginScreen.render();
+
+rootEle.innerHTML = HomeScreen.render();
+
 
 // Check if after_render method is defined
 //    If yes, invoke after_render()
-if (LoginScreen.after_render) {
-  LoginScreen.after_render();
+if (HomeScreen.after_render) {
+  HomeScreen.after_render();
 }
