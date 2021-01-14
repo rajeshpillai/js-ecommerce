@@ -13,6 +13,12 @@ const AdminScreen = {
           category: document.querySelector("#category").value
         };
 
+        // validation
+        if (!productData.title) {
+          alert("Title is needed!");
+          return;
+        }
+
         const data = await createProduct(productData);
 
         if (data.error) {
