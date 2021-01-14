@@ -2,6 +2,7 @@ import LoginScreen from './components/login-screen.js';
 import HomeScreen from './components/home-screen';
 import Error404Screen from './components/error404-screen';
 import HeaderComponent from './components/header';
+import AdminScreen from './components/admin-screen';
 
 import './styles/site.css';
 
@@ -10,6 +11,7 @@ const rootEle = document.querySelector("#root");
 const routes = {
   '/': HomeScreen,
   '/signin': LoginScreen,
+  '/admin': AdminScreen
 }
 
 const parseRequestUrl = () => {

@@ -12,6 +12,7 @@ const Header = {
           <a href="/products/category/${c}">${c}</a>
         `).join(" ")
         }
+        <a href="/#/admin">ADMIN</a>
       </nav>   
     `
   }

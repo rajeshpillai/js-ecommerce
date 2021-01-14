@@ -18,3 +18,34 @@ export const getCategories = async () => {
     console.log("ERROR: ", e);
   }
 }
+
+export const createProduct = async (productData) => {
+  try {
+    const response = await fetch("https://fakestoreapi.com/products", {
+      method: "POST",
+      body: JSON.stringify(productData)
+    });
+
+    const product = await response.json();
+    console.log("New product saved: ", product);
+
+    return product;
+  }catch(e) {
+    console.log("ERROR: ", e);
+    return {
+      error: e
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
