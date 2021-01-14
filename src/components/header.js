@@ -4,6 +4,10 @@ const Header = {
   render: async () => {
     const categories = await getCategories();
     console.log("categories: ", categories);
+
+    let cartItems = localStorage.getItem('js-cart');
+    cartItems = cartItems ? JSON.parse(cartItems): {};  
+
     return `
       <nav>
         <a href="/#/">HOME</a>
@@ -13,6 +17,7 @@ const Header = {
         `).join(" ")
         }
         <a href="/#/admin">ADMIN</a>
+        <a href="#">(cart ${cartItems.products.length})</a>
       </nav>   
     `
   }
