@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin: 10px;
+}

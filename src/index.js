@@ -1,6 +1,8 @@
 import LoginScreen from './components/login-screen.js';
 import HomeScreen from './components/home-screen';
 
+import './styles/site.css';
+
 const rootEle = document.querySelector("#root");
 
 rootEle.innerHTML = HomeScreen.render();

@@ -12,8 +12,10 @@ const HomeScreen = {
           products.map(product => `
             <div class="product">
               <header>${product.title}</header>
-              <span>${product.category}</span>
-              <span>Rs. ${product.price} </span>
+              <div>
+                <span>${product.category}</span>
+                <span>Rs. ${product.price} </span>
+              </div>
               <div class="product-image">
                 <img src="${product.image}" />
               </div>
