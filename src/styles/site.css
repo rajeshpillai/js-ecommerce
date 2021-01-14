@@ -8,5 +8,8 @@ body {
 }
 
 .product {
+  border: 1px solid #ddd;
   margin: 10px;
+  width: 200px;
+  flex: 1;
 }

@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   "mode": "none",
-  "entry": "./src/index.js",
+  "entry": ["./src/index.js"],
   "output": {
     "path": __dirname + '/dist',
     "filename": "bundle.js"
@@ -29,6 +29,9 @@ module.exports = {
           "options": {
             "presets": [
               "@babel/preset-env"             
+            ],
+            "plugins":[
+              ["@babel/transform-runtime"]
             ]
           }
         }
