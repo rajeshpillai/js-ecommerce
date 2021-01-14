@@ -13,3 +13,6 @@ body {
   width: 200px;
   flex: 1;
 }
+.product img {
+  width: 200px;
+}
