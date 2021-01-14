@@ -1,6 +1,7 @@
 import LoginScreen from './components/login-screen.js';
 import HomeScreen from './components/home-screen';
 import Error404Screen from './components/error404-screen';
+import HeaderComponent from './components/header';
 
 import './styles/site.css';
 
@@ -23,17 +24,20 @@ const parseRequestUrl = () => {
 
 const router = async () => {
   const request = parseRequestUrl();
-  const parseUrl = (request.resource? `/${request.resource}` : '/') +
+  const parseUrl = (request.resource ? `/${request.resource}` : '/') +
             (request.id ? '/:id' : '') +
             (request.verb ? `/${request.verb}` : '');
-   //alert(parseUrl);         
-
   const screen = routes[parseUrl] ? routes[parseUrl]: Error404Screen;
+
+  const headerElem = document.querySelector("#header-container");
+  headerElem.innerHTML = HeaderComponent.render();
+
   rootEle.innerHTML = await screen.render();
   if (screen.after_render) {
     screen.after_render();
   }
 }
+
 window.addEventListener("load", router);
 window.addEventListener("hashchange", router);
 
